@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.demo.j1906.mapper.DeptMapper">
+    <resultMap id="DeptMap" type="com.demo.j1906.pojo.Dept">
+        <id property="deptno" column="deptno"></id>
+        <result property="dname" column="dname"></result>
+        <result property="loc" column="loc"></result>
+    </resultMap>
+
+    <select id="findAll" resultMap="DeptMap">
+        select * from dept
+    </select>
+</mapper>

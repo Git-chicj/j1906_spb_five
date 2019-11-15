@@ -1,0 +1,18 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: service-producer-b
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/myrbac?characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password:
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.demo.j1906.pojo
